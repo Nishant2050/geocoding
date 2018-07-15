@@ -22,7 +22,7 @@ def upload_files(request):
             rb = xlrd.open_workbook(os.path.join(settings.MEDIA_ROOT, newdoc.docfile.name))
             r_sheet = rb.sheet_by_index(0)
             address = [",".join([r_sheet.cell_value(r,c) for c in range(r_sheet.ncols)])for r in range (r_sheet.nrows)]
-            api_key = "AIzaSyCjfiLq_PvGODD68A0Z_nDoEeUuHa9Mui8"
+            api_key = "**********************************"
             wb = copy(rb)
             print('rows', r_sheet.nrows)
             for i in range(r_sheet.nrows):    
